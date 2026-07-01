@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+@theme {
+  --color-primary: #a3ff12;
+  --color-primary-foreground: #0a0a0a;
+  --color-secondary: #1a1a1a;
+  --color-secondary-foreground: #ffffff;
+  --color-background: #101010;
+  --color-foreground: #ffffff;
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-accent: #1a1a1a;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+@keyframes accordion-down {
+  from { height: 0; }
+  to { height: var(--radix-accordion-content-height); }
+}
+@keyframes accordion-up {
+  from { height: var(--radix-accordion-content-height); }
+  to { height: 0; }
+}
+.animate-accordion-down { animation: accordion-down 0.2s ease-out; }
+.animate-accordion-up { animation: accordion-up 0.2s ease-out; }
